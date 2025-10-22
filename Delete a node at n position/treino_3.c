@@ -27,7 +27,7 @@ void	ft_print(t_node *head)
 
 	temp = head;
 	printf("List:\n");
-	while (!temp)
+	while (temp)
 	{
 		printf("%d\n", temp->data);
 		temp = temp->next;
@@ -37,7 +37,7 @@ void	ft_print(t_node *head)
 void	ft_delete(int n, t_node **head)
 {
 	t_node	*temp1;
-	t_node	*temp2
+	t_node	*temp2;
 	int		i;
 
 	temp1 = *head;
