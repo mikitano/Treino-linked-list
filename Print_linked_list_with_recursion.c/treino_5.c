@@ -15,7 +15,7 @@ void	ft_reverse_print_recurusion(t_node *head)
 {
 	t_node	*temp;
 
-	if(head == NULL)
+	if (head == NULL)
 		return ;
 	ft_reverse_print_recurusion(temp->next);
 	printf("%d", temp->data);
