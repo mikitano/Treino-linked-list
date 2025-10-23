@@ -11,6 +11,16 @@ void	ft_print_recursion(t_node *head)
 	ft_print_recursion(temp->next);
 }
 
+void	ft_reverse_print_recurusion(t_node *head)
+{
+	t_node	*temp;
+
+	if(head == NULL)
+		return ;
+	ft_reverse_print_recurusion(temp->next);
+	printf("%d", temp->data);
+}
+
 void	ft_insert(int i, t_node **head)
 {
 	t_node	*new;
@@ -42,4 +52,6 @@ int	main(void)
 	ft_insert(6, &head);
 	ft_insert(5, &head);
 	ft_print_recursion(head);
+	printf("\n");
+	ft_reverse_print_recurusion(head);
 }
