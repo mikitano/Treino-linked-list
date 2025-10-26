@@ -14,11 +14,13 @@ void	ft_reverse_list(t_node **head)
 {
 	t_node	*temp;
 
-	temp = *head;
 	if (temp->next == NULL)
 	{
 		head = temp;
 		return ;
 	}
 	ft_reverse_list(head->next);
+	temp = *head->next;
+	temp->next = *head;
+	*head->next = NULL;
 }
